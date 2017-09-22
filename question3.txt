@@ -1,0 +1,21 @@
+Question statement:
+Given pointers to two nodes a and b in a rooted binary tree (not BST) where every node has a pointer to its parent, determine whether the two nodes have a common ancestor besides the root.
+You can give the candidate a prototype of the function like:
+boolean haveCommonAncestorsBesideRoot(
+             Node node1, Node node2, Node root) {
+   ...
+}
+Example
+        1
+      /   \
+     2     3
+    / \   /  \
+   4   5 6    7
+ haveCommonAncestorsBesideRoot(4, 5, 1) -> true
+ haveCommonAncestorsBesideRoot(4, 6, 1) -> false
+Tips for interviewer (Only share this with the candidate as needed)
+You may need to remind the candidate that each node has a pointer to its parent. That makes the problem a lot easier.
+The code needs to handle the case where the nodes are at different levels (e.g. haveCommonAncestorsBesideRoot(4, 3, 1) -> false).
+The definition of ancestors is intentionally left vague. The candidate should notice cases like:
+haveCommonAncestorsBesideRoot(2, 4, 1). It comes down to whether 2 is its own ancestor. I don't care whether it is or not but the candidate should state their assumption.
+There are several good solutions to this, try to push the candidate to come up with an efficient solution (less than O(n^2) and with minimal additional storage). In doing this analysis, it's also important to define whether n refers to the number of nodes in the tree (what if the tree is imbalanced?) or the height of the tree.

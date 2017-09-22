@@ -1,0 +1,14 @@
+Question statement:
+Return the longest contiguous substring of 2 distinct characters from an input string.
+Example
+input: abbaacab
+output : abbaa
+input: abcefabbabaabefghghfa
+return: abbabaab
+input: aabceddddcdccecabceftg
+return: ddddcdcc
+input: acbabbcbca
+return : bbcbc
+Tips for interviewer (Only share this with the candidate as needed)
+Make sure that they notice that they need to backtrack at the end of each match since the last substring could be part of next match (like the last example above).
+If they get confused by their own code, hint that it may be easier to store indexes of the best match so far rather than the substring itself.
